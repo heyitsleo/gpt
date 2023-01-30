@@ -1,6 +1,6 @@
 ---
-title: Hello SimpleAI Chatgpt Detector Roberta
-emoji: 🏃
+title: Detect AI Plagiarism
+emoji: 👀
 colorFrom: yellow
 colorTo: blue
 sdk: gradio
