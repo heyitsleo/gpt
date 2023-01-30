@@ -1,6 +1,4 @@
 import gradio as gr
-from transformers import pipeline
-
 
 gr.interface.load("spaces/Hello-SimpleAI/chatgpt-detector-single").launch()
 
