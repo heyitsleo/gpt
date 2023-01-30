@@ -1,6 +1,7 @@
 import gradio as gr
 
-model = gr.Interface.load("models/Hello-SimpleAI/chatgpt-detector-roberta")
+auth_token = "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"
+model = gr.Interface.load("models/Hello-SimpleAI/chatgpt-detector-roberta", api_key=auth_token)
 
 def predict_en(text):
     res = model(text)[0]
