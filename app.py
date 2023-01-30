@@ -1,3 +1,3 @@
 import gradio as gr
 
-gr.Interface(title="hello world").load("models/Hello-SimpleAI/chatgpt-detector-roberta").launch()
+gr.Interface.load("models/Hello-SimpleAI/chatgpt-detector-roberta", title="hello world").launch()
