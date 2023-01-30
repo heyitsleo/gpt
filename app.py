@@ -2,8 +2,7 @@ import gradio as gr
 from transformers import pipeline
 
 
-auth_token = "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"
-pipeline_en = pipeline(task="text-classification", model="Hello-SimpleAI/chatgpt-detector-single",use_auth_token=auth_token)
+gr.interface.load("spaces/Hello-SimpleAI/chatgpt-detector-single").launch()
 
 def predict_en(text):
     res = pipeline_en(text)[0]
@@ -23,7 +22,7 @@ with gr.Blocks() as demo:
         label1 = gr.Textbox(lines=1, label='Predicted Label 🎃')
         score1 = gr.Textbox(lines=1, label='Likelihood')
 
-    button1.click(predict_en, inputs=[t1], outputs=[label1,score1])
+    button1.click(model, inputs=[t1], outputs=[label1,score1])
 
 
 demo.launch()
