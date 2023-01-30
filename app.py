@@ -1,6 +1,6 @@
 import gradio as gr
 
-gr.interface.load("spaces/Hello-SimpleAI/chatgpt-detector-single").launch()
+gr.Interface.load("spaces/Hello-SimpleAI/chatgpt-detector-single").launch()
 
 def predict_en(text):
     res = pipeline_en(text)[0]
