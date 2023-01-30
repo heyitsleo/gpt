@@ -1,10 +1,12 @@
 import gradio as gr
+from transformers import pipeline
+
 
 auth_token = "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"
-model = gr.Interface.load("models/Hello-SimpleAI/chatgpt-detector-roberta", api_key=auth_token)
+pipeline_en = pipeline(task="text-classification", model="Hello-SimpleAI/chatgpt-detector-single",use_auth_token=auth_token)
 
 def predict_en(text):
-    res = model(text)[0]
+    res = pipeline_en(text)[0]
     return res['label'],res['score']
 
 with gr.Blocks() as demo:
