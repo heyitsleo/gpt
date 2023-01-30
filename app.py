@@ -1,7 +1,7 @@
 import gradio as gr
 
 model = gr.Interface.load("models/Hello-SimpleAI/chatgpt-detector-roberta",
-                  title="🤖 Start detecting AI Plagiarism").launch()
+                  title="🤖 Start detecting AI Plagiarism")
 
 def predict_en(text):
     res = model(text)[0]
