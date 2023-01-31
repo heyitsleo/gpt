@@ -25,7 +25,7 @@ with gr.Blocks() as demo:
         t1 = gr.Textbox(lines=5, label='Paste the text you want to check',value="There are a few things that can help protect your credit card information from being misused when you give it to a restaurant or any other business:\n\nEncryption: Many businesses use encryption to protect your credit card information when it is being transmitted or stored. This means that the information is transformed into a code that is difficult for anyone to read without the right key.")
         button1 = gr.Button("👀 See results")
         score1 = gr.Textbox(lines=1, label='There is a')
-        label1 = gr.Textbox(lines=1, label='That this text is written entirely by')
+        label1 = gr.Textbox(lines=1, label='That this text is written entirely by a')
 
     button1.click(predict_en, inputs=[t1], outputs=[score1, label1])
 
