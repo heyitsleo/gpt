@@ -15,7 +15,7 @@ def predict_en(text):
 
 with gr.Blocks() as demo:
     gr.Markdown("""
-                     # 🤖 AI Plagiarism Checker
+                     # 🤖 Detect AI Plagiarism with Jurnee
                      Paste in the text you want to check and get a holistic score for how much of the document is written by AI. We recommend that educators take these results as one of many pieces in their assessment of student work. This model is based on Hello Simple's paper [arxiv: 2301.07597](https://arxiv.org/abs/2301.07597) and Github project [Hello-SimpleAI/chatgpt-comparison-detection](https://github.com/Hello-SimpleAI/chatgpt-comparison-detection).
                 """)
     with gr.Tab("Try it out 👇"):
